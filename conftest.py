@@ -1,5 +1,7 @@
 import pytest
 from playwright.sync_api import Page
+from pages.login_page import LoginPage
+from pages.dashboard_page import DashboardPage
 
 @pytest.fixture(scope="session")
 def browser_context_args(browser_context_args):
@@ -11,5 +13,10 @@ def browser_context_args(browser_context_args):
 
 @pytest.fixture
 def login_page(page: Page):
-    page.goto("/login")
-    return page
+    lp = LoginPage(page)
+    lp.navigate()
+    return lp
+
+@pytest.fixture
+def dashboard_page(page: Page):
+    return DashboardPage(page)
