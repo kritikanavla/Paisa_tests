@@ -23,5 +23,9 @@ DASHBOARD_PAGE = {
     "system_status": "text=FastAPI Connected",
     "footer_stable": "text=stable",
     "record_trade_btn": "button:has-text('Record New Trade')",
+    "market_discoveries_btn": "button:has-text('Market Discoveries')",
+    "global_search": "input[placeholder='Search ticker...']",
+    "sync_status": "text=Sync Paisa",
+    "logout_icon": ".logout-icon, [aria-label='Logout'], button:has-text('Logout')", # Mapping to likely selectors
     "sector_mix_chart": "canvas, svg, .chart-container", # Generic chart selectors
 }

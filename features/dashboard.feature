@@ -43,3 +43,31 @@ Feature: Dashboard Functionality
     Given I am logged in and on the Dashboard page
     Then I should see the "Sector Mix" or "Exposure Weights" chart
     And it should be interactive and display data distribution
+
+  Scenario 8: Detailed Trade Analysis Navigation
+    Given I am on the Dashboard page with active positions
+    When I click on a ticker row (e.g., "NVDA") in the Active Positions table
+    Then I should be navigated to the "Analysis" page for that ticker
+    And the URL should contain "?ticker=NVDA"
+
+  Scenario 9: Market Discoveries Redirection
+    Given I am on the Dashboard page
+    When I click the "Market Discoveries" button in the Actions section
+    Then I should be navigated to the "/discovery" page
+
+  Scenario 10: Global Ticker Search
+    Given I am on the Dashboard page
+    Then I should see a global "Search ticker..." input box at the top
+    When I enter a ticker symbol and press Enter
+    Then I should see the analysis for that ticker
+
+  Scenario 11: Data Sync Initialization
+    Given I am on the Dashboard page
+    When the page is refreshed
+    Then I should see a "Sync Paisa" status message during data loading
+    And the dashboard should populate with the latest data once sync is complete
+
+  Scenario 12: Logout via Icon
+    Given I am on the Dashboard page
+    When I click the "Logout" icon next to the profile label
+    Then I should be logged out and redirected to the login page
