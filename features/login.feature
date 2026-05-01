@@ -19,3 +19,21 @@ Feature: Login Functionality
     When the page finishes loading
     Then the "Login" button should be visible and enabled
     And its selector should match the entry in locators.py
+
+  Scenario: Navigate to Register Tab
+    Given I am on the "Sign In" tab of the Paisa login page
+    When I click the "Register" tab
+    Then I should see the registration form
+    And the "Sign Up" button should be visible
+
+  Scenario: Validation for Empty Fields
+    Given I am on the Paisa login page
+    When I leave the email and password fields empty
+    And I click the "Login" button
+    Then I should see a browser validation bubble saying "Please fill out this field"
+
+  Scenario: Validation for Invalid Email Format
+    Given I am on the Paisa login page
+    When I enter "invalid-email" into the email field
+    And I click the "Login" button
+    Then I should see a browser validation bubble regarding the "@" character
