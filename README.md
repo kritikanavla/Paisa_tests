@@ -11,9 +11,13 @@ Repository for testing the Paisa application.
 
 ### Login Functionality (`features/login.feature`)
 1. **Successful Login**: Validates redirection to Dashboard and visibility of core widgets.
-2. **Failed Login**: Validates error handling for invalid credentials.
-3. **Healer Test**: Ensures the login button remains stable and matches defined locators.
-4. **...and 11 more scenarios** covering registration, security, and edge cases.
+2. **...and 13 more scenarios** covering registration, security, and edge cases.
+
+### Dashboard Functionality (`features/dashboard.feature`)
+1. **Dashboard Overview**: Verifies visibility of all 5 summary widgets.
+2. **Active Positions**: Validates the central trade table and its AI Hunter integrations.
+3. **System Monitoring**: Checks real-time health stats and API connection state.
+4. **Navigation & Actions**: Verifies sidebar links and quick action buttons.
 
 ## Automation
 

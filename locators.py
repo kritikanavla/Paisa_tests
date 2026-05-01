@@ -11,5 +11,17 @@ LOGIN_PAGE = {
 }
 
 DASHBOARD_PAGE = {
-    "total_balance_widget": "text=Total Balance",
+    "total_capital": "text=Total Capital",
+    "beta_exposure": "text=Beta-Weighted Exposure",
+    "unrealized_pnl": "text=Unrealized P&L",
+    "winning_positions": "text=Winning Positions",
+    "actions_required": "text=Actions Required",
+    "active_positions_table": "table:has-text('Active Positions')",
+    "deep_analysis_label": "text=Deep Analysis Pick",
+    "sidebar_hunter": "a:has-text('Hunter')",
+    "sidebar_discovery": "a:has-text('Discovery')",
+    "system_status": "text=FastAPI Connected",
+    "footer_stable": "text=stable",
+    "record_trade_btn": "button:has-text('Record New Trade')",
+    "sector_mix_chart": "canvas, svg, .chart-container", # Generic chart selectors
 }
