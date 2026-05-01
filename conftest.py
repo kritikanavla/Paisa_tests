@@ -20,3 +20,13 @@ def login_page(page: Page):
 @pytest.fixture
 def dashboard_page(page: Page):
     return DashboardPage(page)
+
+@pytest.fixture
+def logged_in_dashboard(page: Page):
+    lp = LoginPage(page)
+    lp.navigate()
+    # Using dummy credentials - in a real env, use environment variables
+    lp.login("test@example.com", "Password123!")
+    dp = DashboardPage(page)
+    dp.navigate()
+    return dp
