@@ -1,7 +1,7 @@
 Feature: Login Functionality
 
   Scenario 1: Successful Login with Valid Credentials
-    Given I am on the Paisa login page (https://paisa.ritadhi.com)
+    Given I am on the Paisa login page (https://paisa.example.com)
     When I enter a valid username and a valid password
     And I click the "Login" button
     Then I should be redirected to the "Dashboard" page
@@ -54,7 +54,7 @@ Feature: Login Functionality
 
   Scenario 9: Redirect Unauthenticated User
     Given I am not logged in
-    When I attempt to navigate directly to "https://paisa.ritadhi.com/dashboard"
+    When I attempt to navigate directly to "https://paisa.example.com/dashboard"
     Then I should be automatically redirected to the login page
 
   Scenario 10: SEO and Metadata Validation
@@ -88,3 +88,4 @@ Feature: Login Functionality
     When I enter a password containing "$%^&*()_+"
     And I click the "Login" button
     Then it should be processed as a valid password string
+

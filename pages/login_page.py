@@ -19,7 +19,8 @@ class LoginPage(BasePage):
     def login(self, email, password):
         self.email_field.fill(email)
         self.password_field.fill(password)
-        self.login_button.click()
+        with self.page.expect_navigation(url=lambda u: "/login" not in u, timeout=10000):
+            self.login_button.click()
 
     def register(self, email, password):
         self.register_tab.click()

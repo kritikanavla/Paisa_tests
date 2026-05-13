@@ -13,11 +13,19 @@ def test_scenario_2_active_positions_table(logged_in_dashboard: DashboardPage):
     # Check for column headers
     expect(logged_in_dashboard.page.locator("text=Ticker")).to_be_visible()
     expect(logged_in_dashboard.page.locator("text=Strategy")).to_be_visible()
+    
+    # Verify ALL 12 entries are present (Mocking Layer check)
+    rows = logged_in_dashboard.page.locator("table tbody tr")
+    # Some apps might render headers or footers in table, so we check for at least 12
+    expect(rows).to_have_count(12)
 
 def test_scenario_3_ai_hunter_integration(logged_in_dashboard: DashboardPage):
     """Scenario 3: AI Hunter Integration"""
-    # This might require actual data to be present
-    expect(logged_in_dashboard.deep_analysis_label).to_be_visible()
+    # Verify specific strategies from trade_data.json
+    expect(logged_in_dashboard.page.locator("text=Deep Analysis Pick")).to_be_visible()
+    expect(logged_in_dashboard.page.locator("text=Bull Call Spread")).to_be_visible()
+    expect(logged_in_dashboard.page.locator("text=Iron Condor")).to_be_visible()
+    expect(logged_in_dashboard.page.locator("text=Momentum Play")).to_be_visible()
 
 def test_scenario_4_sidebar_navigation(logged_in_dashboard: DashboardPage):
     """Scenario 4: Sidebar Navigation"""

@@ -1,0 +1,39 @@
+[
+  {
+    "ticker": "AAPL",
+    "quantity": 1000000,
+    "price": 180.0,
+    "date": "2026-05-12",
+    "strategy_type": "Stress Test: Whale"
+  },
+  {
+    "ticker": "NVDA",
+    "quantity": -10,
+    "price": 500.0,
+    "trade_type": "OPTION",
+    "expiry": "2026-12-15",
+    "date": "2026-05-12",
+    "strategy_type": "Stress Test: Inverse Delta"
+  },
+  {
+    "ticker": "GME",
+    "quantity": 5000,
+    "price": 15.0,
+    "date": "2026-05-12",
+    "strategy_type": "Stress Test: Beta Spike"
+  },
+  {
+    "ticker": "TSLA",
+    "quantity": 394,
+    "price": 460.44037913455975,
+    "date": "2026-04-26",
+    "strategy_type": "Core: ZEBRA"
+  },
+  {
+    "ticker": "AAPL",
+    "quantity": 348,
+    "price": 325.17172886662775,
+    "date": "2026-04-24",
+    "strategy_type": "Core: ZEBRA"
+  }
+]
